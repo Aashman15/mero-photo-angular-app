@@ -1,0 +1,27 @@
+<div class="container">
+  <hr>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MEROPHOTO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" style="color: {{getColor('home')}}" (click)="selectPage('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: {{getColor('upload')}}" style="selectPage('upload')" (click)="selectPage('upload')">Upload Photo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: {{getColor('photos')}}" style="selectPage('photos')" (click)="selectPage('photos')">Photos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <app-home *ngIf="selectedPage === 'home'"></app-home>
+  <app-upload-photo *ngIf="selectedPage === 'upload'"></app-upload-photo>
+  <app-list-of-photos *ngIf="selectedPage === 'photos'"></app-list-of-photos>
+</div>

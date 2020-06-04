@@ -1,0 +1,5 @@
+<button class="btn btn-primary" (click) = getPhotos()>Load Photos</button>
+<hr>
+<ul *ngFor="let photo of photos">
+  <li><img height="300px" width="300px" src="{{photo.photoUrl}}"></li>
+</ul>
